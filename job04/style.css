@@ -1,0 +1,61 @@
+/*  pour centrer la navigation  */
+nav ul{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+
+}
+/* donne un ordre dans la navigation    */
+li{
+    width: 7rem;
+    list-style-type: none;
+}
+    
+/*  Burger -    début   */
+
+* {
+    box-sizing: border-box;
+  }
+  
+ /*  la checkbox n'est pas affichée, on peut cliquer dessus pour afficher la ul */
+  .burger {                    
+    display: none;
+  }
+
+  /*  clic sur la checkbox, la ul s'affiche */
+  .burger:checked ~ ul {        
+    display: flex;
+}
+
+  .hamburger {
+    display:block;
+    width: 3.4em;
+    height: 2.4em;
+    line-height: .1em;
+    border: 0.1em solid black;
+    padding: 0 .4em .4em;
+  }
+  
+  .hamburger hr {
+    color: #ddd;
+    height: .1em;
+    border: 0;
+    background: black;
+    border: none;
+  }
+  
+/*   Le burger ne s'affiche pas sur écran large   */
+@media (min-device-width:768px) { .hamburger{display:none} }
+
+/*   Le burger s'affiche sur petit écran    */
+@media (max-device-width:767px) {
+
+    nav ul{ 
+        flex-direction:column; /*  la liste est en colonne sur petit écran */
+        display: none;         /*  par défaut la ul n'est pas affichée, il faut cliquer pour l'afficher */
+        margin:0;
+        width:auto;  
+     }
+     
+    }

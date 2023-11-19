@@ -1,0 +1,6 @@
+@media screen and (max-width: 1680px) and (min-width: 1280px) {
+    body {
+        background-color: #275fa0;
+    }
+}
+/* on applique un fond de couleur au body si la taille de l'écrant se situe entre 1680 et 1280 pixel */

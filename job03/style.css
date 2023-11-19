@@ -1,0 +1,35 @@
+section {
+    background-color: #88c1d0;
+    width: 50px;
+    height: 50px;
+    margin: 5%;
+}
+/* on donne des parametres a tout les sections de notre page html */
+
+body {
+    display: flex;
+}
+
+@media screen and (min-width: 1600px) {
+    body {
+        display: flex;
+        flex-direction: row;
+    }
+}
+/* on dit que nos sections doivent etre horizontale si la page depasse les 1600px */
+
+@media screen and (max-width: 1599px) and (min-width: 768px) {
+    body {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+/* on dit que nos sections doivent etre sous forme de carré si la page se situe entre 1599 et 768 pixels */
+
+@media screen and (max-width: 767px) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+}
+/*on dit que nos sections doivent etre en colonne si la page est en dessous de 767 pixels  */
